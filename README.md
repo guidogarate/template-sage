@@ -1,8 +1,8 @@
 # INFORMACION
 
-url Panel ADmin SAGE [admin-template](https://admin-template-1.herokuapp.com/)</br>
+url plantilla SAGE [admin-template](https://sage-plantilla.herokuapp.com/)</br>
 
-url Sistema SAGE [SAGE-SYSTEM](https://sage-bo.herokuapp.com/) </br>
+url sistema SAGE [SAGE-SYSTEM](https://sage-bo.herokuapp.com/) </br>
 
 `git clone` https://github.com/guidogarate/sage-prod-frontEnd.git
 
