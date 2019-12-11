@@ -9,8 +9,7 @@
 
 // Setup module
 // ------------------------------
-
-var Select2Selects = function() {
+var Select2Selects = function () {
 
 
     //
@@ -18,7 +17,7 @@ var Select2Selects = function() {
     //
 
     // Select2 examples
-    var _componentSelect2 = function() {
+    var _componentSelect2 = function () {
         if (!$().select2) {
             console.warn('Warning - select2.min.js is not loaded.');
             return;
@@ -128,7 +127,7 @@ var Select2Selects = function() {
             templateResult: iconFormat,
             minimumResultsForSearch: Infinity,
             templateSelection: iconFormat,
-            escapeMarkup: function(m) { return m; }
+            escapeMarkup: function (m) { return m; }
         });
 
 
@@ -137,7 +136,7 @@ var Select2Selects = function() {
         //
 
         // Setup matcher
-        function matchStart (term, text) {
+        function matchStart(term, text) {
             if (text.toUpperCase().indexOf(term.toUpperCase()) == 0) {
                 return true;
             }
@@ -161,11 +160,11 @@ var Select2Selects = function() {
 
         // Data
         var array_data = [
-            {id: 0, text: 'enhancement'},
-            {id: 1, text: 'bug'},
-            {id: 2, text: 'duplicate'},
-            {id: 3, text: 'invalid'},
-            {id: 4, text: 'wontfix'}
+            { id: 0, text: 'enhancement' },
+            { id: 1, text: 'bug' },
+            { id: 2, text: 'duplicate' },
+            { id: 3, text: 'invalid' },
+            { id: 4, text: 'wontfix' }
         ];
 
         // Loading array data
@@ -181,7 +180,7 @@ var Select2Selects = function() {
         //
 
         // Format displayed data
-        function formatRepo (repo) {
+        function formatRepo(repo) {
             if (repo.loading) return repo.text;
 
             var markup = '<div class="select2-result-repository clearfix">' +
@@ -204,7 +203,7 @@ var Select2Selects = function() {
         }
 
         // Format selection
-        function formatRepoSelection (repo) {
+        function formatRepoSelection(repo) {
             return repo.full_name || repo.text;
         }
 
@@ -253,7 +252,7 @@ var Select2Selects = function() {
             minimumResultsForSearch: Infinity,
             placeholder: 'Select State...'
         });
-        $('.access-get').on('click', function () { alert('Selected value is: '+$('.select-access-value').val()); });
+        $('.access-get').on('click', function () { alert('Selected value is: ' + $('.select-access-value').val()); });
         $('.access-set').on('click', function () { $('.select-access-value').val('CA').trigger('change'); });
 
 
@@ -283,7 +282,7 @@ var Select2Selects = function() {
             });
         }
         create_menu();
-        $('.access-create').on('click', function () { return create_menu()});
+        $('.access-create').on('click', function () { return create_menu() });
         $('.access-destroy').on('click', function () { $('.select-access-create').select2('destroy'); });
 
 
@@ -293,8 +292,8 @@ var Select2Selects = function() {
 
         // Reacting to external value changes
         $('.select-access-multiple-value').select2();
-        $('.change-to-ca').on('click', function() { $('.select-access-multiple-value').val('CA').trigger('change'); });
-        $('.change-to-ak-co').on('click', function() { $('.select-access-multiple-value').val(['AK','CO']).trigger('change'); });
+        $('.change-to-ca').on('click', function () { $('.select-access-multiple-value').val('CA').trigger('change'); });
+        $('.change-to-ak-co').on('click', function () { $('.select-access-multiple-value').val(['AK', 'CO']).trigger('change'); });
 
 
         // Open/close menu
@@ -320,7 +319,7 @@ var Select2Selects = function() {
             });
         }
         create_menu_multiple();
-        $('.access-multiple-create').on('click', function () { return create_menu_multiple()});
+        $('.access-multiple-create').on('click', function () { return create_menu_multiple() });
         $('.access-multiple-destroy').on('click', function () { $('.select-access-multiple-create').select2('destroy'); });
 
 
@@ -337,7 +336,7 @@ var Select2Selects = function() {
     //
 
     return {
-        init: function() {
+        init: function () {
             _componentSelect2();
         }
     }
@@ -347,6 +346,6 @@ var Select2Selects = function() {
 // Initialize module
 // ------------------------------
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     Select2Selects.init();
 });
