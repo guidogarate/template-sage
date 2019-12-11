@@ -3,7 +3,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + "/docs/prod"));
+app.use(express.static(__dirname + "/Template/layout_1/LTR/material/full"));
 
 app.listen(port, () => {
   console.log(`Escuchando peticiones en el puerto ${port}`);
